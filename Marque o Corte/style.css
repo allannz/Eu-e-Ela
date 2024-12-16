@@ -1,0 +1,131 @@
+body {
+  font-family: Arial, sans-serif;
+  padding: 80px 20px 20px;
+  background-color: #000000;
+}
+
+h1,
+p,
+figcaption {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #ffffff;
+}
+
+/*Barra de Nvegação*/
+.navbar {
+  background-color: #282828;
+  padding: 15px 30px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 18px;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #ff6200;
+}
+
+/*Containers*/
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 20px;
+  margin: 10%;
+}
+
+.grid-item {
+  background-color: #282828;
+  padding: 30px;
+  text-align: center;
+  border-radius: 40px;
+}
+
+.grid-item img {
+  width: 90%;
+  height: auto;
+  margin-bottom: 10px;
+  border-radius: 40px;
+}
+
+.grid-item a {
+  display: block;
+  margin-bottom: 10px;
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.grid-item button {
+  padding: 10px 20px;
+  background-color: #ff6200;
+  color: #fff;
+  border: none;
+  border-radius: 40px;
+}
+figure {
+  height: 1fr;
+  width: 1fr;
+}
+
+/*hovers*/
+
+.nav-links a:hover {
+  color: #ff6200;
+}
+
+.grid-item:hover {
+  transition: transform 0.3s ease-in-out;
+  background-color: #333333;
+}
+
+.grid-item img:hover {
+  transform: scale(1.1);
+  transition: transform 0.3s ease;
+  filter: brightness(1.2);
+}
+
+.grid-item a:hover {
+  color: #ff6200;
+  text-decoration: underline;
+  transition: color 0.3s ease;
+}
+
+.grid-item button:hover {
+  background-color: #e55b00;
+  cursor: pointer;
+  transform: translateY(-3px);
+  transition: all 0.3s ease;
+  box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.5);
+}
+
+/*Responsividade*/
+@media (max-width: 768px) {
+  .nav-links {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .grid-container {
+    grid-template-columns: 1fr;
+    margin: 5%;
+  }
+}
